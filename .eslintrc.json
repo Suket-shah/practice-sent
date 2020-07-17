@@ -10,6 +10,7 @@
     "ecmaVersion": 11
   },
   "rules": {
+    "no-unused-vars":["warn", {"args": "none"}],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single"],
