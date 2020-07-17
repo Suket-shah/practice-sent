@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -103,6 +106,156 @@ a {
   color: #ffffff;
 }
 
+/* avi */
+/* remove this before push */
+#avi {
+  height: 1000px;
+}
+
+/* Kaustub */
+
+.our-vision {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.our-vision-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1cbcdc;
+}
+
+.vision-msg {
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  padding: 8em 5em;
+  border-radius: 250px/ 320px;
+  min-width: 300px;
+  max-width: 300px;
+  font-weight: 300;
+  z-index: 2;
+  font-size: 16px;
+  margin-right: 20em;
+  /* height: 600px; */
+}
+
+.our-vision img {
+  position: absolute;
+  left: 45%;
+  border-radius: 250px / 320px;
+  width: 500px;
+  z-index: 1;
+}
+
+.carry-packages {
+  display: flex;
+  height: 300px;
+  position: relative;
+}
+
+.carry-image {
+  width: 50%;
+}
+
+.carry-hero {
+  width: 50%;
+  opacity: 22%;
+}
+
+.carry-msg-title {
+  position: absolute;
+  left: 52.8%;
+  font-size: 3rem;
+  color: #058ddb;
+}
+
+.carry-msg-subtitle {
+  position: absolute;
+  left: 53%;
+  top: 30%;
+  width: 33%;
+  font-weight: 300;
+}
+
+.carry-msg-subtitle span {
+  font-weight: 500;
+}
+
+#carry-apply-btn {
+  position: absolute;
+  left: 53%;
+  top: 65%;
+  padding: 0.8em 3em;
+  font-weight: 400;
+  background-color: #008afc;
+  color: #fff;
+  border: 0px solid;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+#carry-apply-btn:hover {
+  background-color: #2b6ca3;
+}
+
+footer {
+  height: 250px;
+  background-color: #2b6ca3;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+footer a {
+  color: #fff;
+  font-weight: 300;
+}
+
+footer a:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.contact-info {
+  padding-top: 2em;
+}
+
+.social-icons {
+  margin-top: 2em;
+}
+
+.space-around-left {
+  padding-left: 2em;
+  padding-right: 1em;
+}
+
+.space-around-right {
+  padding-left: 1em;
+  padding-right: 2em;
+}
+
+.trademark {
+  margin-top: 2em;
+}
+
+#company-name {
+  font-weight: 500;
+}
+
+@media (max-width: 1136px) {
+  html {
+    font-size: 14px;
+  }
+  .carry-msg-subtitle {
+    width: 40%;
+  }
+}
+
 @media (max-width: 1000px) {
   .covid-notice {
     display: block;
@@ -112,7 +265,40 @@ a {
   }
 }
 
-/* remove this before push */
-#avi {
-  height: 1000px;
+@media (max-width: 768px) {
+  .our-vision {
+    align-items: center;
+    justify-content: center;
+  }
+  .our-vision img {
+    display: none;
+  }
+  .vision-msg {
+    margin-top: 1em;
+    margin-right: 0;
+  }
+  .our-vision img {
+    position: static;
+  }
+  .carry-image {
+    display: none;
+  }
+  .carry-hero {
+    width: 100%;
+  }
+  .carry-msg-title {
+    font-size: 1.75rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carry-msg-subtitle {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+  }
+  #carry-apply-btn {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
