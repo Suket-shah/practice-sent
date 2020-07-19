@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(require('./routes/index'));
+app.use(require('./routes/carry'));
 
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`);
