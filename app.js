@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 5500;
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(require('./routes/index'));
+
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`);
-});
-
-app.get('/', (req, res, next) => {
-  res.render('index', {});
 });
