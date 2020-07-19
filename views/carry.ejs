@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carry Packages for Money | Sent</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script async src="https://use.fontawesome.com/94c8d2cf59.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <%- include('./includes/header'); %>
+  <main class="carry-package">
+    <section>
+      <h1>Carry packages that <u>need</u> to be <em>sent</em>.</h1>
+      <h3>If you're back home for the weekend, why not make some easy cash by carrying some packages on your way back to campus?</h3>
+      <form action="/carry-packages" method="POST">
+        <div class="form-control">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>This field is required</small>
+        </div>
+        <div class="form-control">
+          <label for="uteid">UT EID</label>
+          <input id="uteid" name="uteid" type="text">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Enter a valid EID</small>
+        </div>
+        <div class="form-control">
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Enter a valid phone number</small>
+        </div>
+        <div class="form-control">
+          <label for="home-address">Hometown Address</label>
+          <input id="home-address" name="address" type="text">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Enter a valid address</small>
+        </div>
+        <div class="form-control">
+          <label for="date">Return Date to UT</label>
+          <input id="date" name="date" type="date">
+          <small>This field is required</small>
+        </div>
+        <div class="form-control">
+          <input id="toc" type="checkbox">
+          <label for="toc"> I Accept the <a>Terms and Conditions</a></label>
+        </div>
+        <button id="carry-submit-btn" type="submit" disabled> Submit</button>
+      </form>
+    </section>
+    <img src="https://images.unsplash.com/photo-1509749837427-ac94a2553d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="carry-bus">
+  </main>
+  <%- include('./includes/footer'); %>
+</body>
+</html>

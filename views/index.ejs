@@ -8,26 +8,7 @@
   </head>
   <body>
     <div id="suket">
-      <nav class="main-nav">
-        <a href="#">
-          <div class="sent-logo">
-            <div class="logo-img-div">
-              <img
-                src="./assets/Sent Logo Official Flat copy.png"
-                alt="Sent Logo"
-                class="logo-img"
-              />
-            </div>
-            <div class="logo-description">
-              <h2 class="logo-description-name">Sent</h2>
-              <p class="logo-description-desc">Bring Students Closer to Home</p>
-            </div>
-          </div>
-        </a>
-        <div class="faq">
-          <h2>FAQ</h2>
-        </div>
-      </nav>
+      <%- include('./includes/header'); %>
       <section class="heading-top">
         <h1 class="main-heading">Need to Deliver?</h1>
         <p class="main-heading-caption">
@@ -87,22 +68,10 @@
         <img class="carry-hero" src="https://images.unsplash.com/photo-1530089711124-9ca31fb9e863?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80" alt="austin-city">
         <p class="carry-msg-title"> Carry Packages</p>
         <p class="carry-msg-subtitle">Going back home for the weekend? Want to <span>earn money</span> on your trip back to campus? Apply now to become a carrier for <span>Sent</span> and find people that need their packages delivered.</p>
-        <button id="carry-apply-btn">Apply Now</button>
+        <a href="/carry-packages" id="carry-apply-btn">Apply Now</a>
        </section>
       <!-- Footer and Social Links -->
-      <footer>
-        <div class="contact-info">
-          <a href="mailto:support@sentservices.com">support@sentservices.com</a>
-          <p>📞(512) 524-7802‬</p>
-        </div>
-       <div class=" social-icons">
-          <a href="https://www.facebook.com/groups/406922236853328/"><img src="/assets/facebook-icon.png" width="30" height="30" alt="facebook-icon"></a>
-          <a href="https://www.instagram.com/Sent.Services/"><img class="space-around-left" src="/assets/instagram-icon.png" width="30" height="30" alt="instagram-icon"></a>
-          <a href="https://twitter.com/SentServices"><img class="space-around-right" src="/assets/twitter-icon.png" width="30" height="30" alt="twitter-icon"></a>
-          <a href="https://www.linkedin.com/company/sentservices/"><img src="/assets/linkedin-icon.png" width="30" height="30" alt="linkedin-icon"></a>
-        </div>
-        <p class="trademark">©2020 by <span id="company-name">Sent LLC</span></p>
-      </footer>
+      <%- include('./includes/footer'); %>
     </div>
     <script src="./js/script.js"></script>
   </body>

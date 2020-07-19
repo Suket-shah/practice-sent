@@ -28,3 +28,51 @@ sentLogo.addEventListener('click', (e) => {
   window.pageYOffset = 0;
   window.pageXOffset = 0;
 });
+
+// Carry Packages
+
+const carrySubmitBtn = document.getElementById('carry-submit-btn');
+const name = document.getElementById('name');
+const uteid = document.getElementById('uteid');
+const phoneNumber = document.getElementById('phone');
+const homeAddress = document.getElementById('home-address');
+const returnDate = document.getElementById('date');
+
+const termsAndConditions = document.getElementById('toc');
+
+const formInputs = [name, uteid, phoneNumber, homeAddress, returnDate];
+
+let validate = (formElement) => {
+  let valid = true;
+  formInputs.forEach(elem => {
+    if (elem.value.trim() === '') {
+      elem.parentElement.classList.add('error');
+      valid = false;
+    }
+  });
+  return valid;
+};
+
+formInputs.forEach(elem => {
+  elem.addEventListener('focus', (e) => {
+    const parentClass = e.target.parentElement.classList;
+    if (parentClass.contains('error')) {
+      parentClass.remove('error');
+    }
+  });
+});
+
+termsAndConditions.addEventListener('click', (e) => {
+  console.log('hi');
+  carrySubmitBtn.disabled = !carrySubmitBtn.disabled;
+});
+
+carrySubmitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const carryForm = e.target.parentElement;
+  if(!validate(carryForm)) {
+    return;
+  }
+  e.target.parentElement.submit();
+});
+
