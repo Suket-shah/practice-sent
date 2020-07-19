@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const path = require('path');
 const fs = require('fs');
 
 router.get('/carry-packages', (req, res, next) => {
@@ -18,6 +17,16 @@ router.post('/carry-packages', (req, res, next) => {
     fs.writeFile('./carriers.json', JSON.stringify(file), () => console.log('New Carrier!'));
   });
   res.redirect('/');
+});
+
+router.get('/api/carriers', (req, res, next) => {
+  fs.readFile('./carriers.json', 'utf8', (err, data) => {
+    if (err) {
+      return console.error(err);
+    }
+    const jsonData = JSON.parse(data);
+    res.json(jsonData);
+  });
 });
 
 module.exports = router;

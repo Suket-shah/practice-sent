@@ -109,14 +109,14 @@ a {
 /* avi */
 
 /* how it works*/
-.how-it-works-title{
+.how-it-works-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #3394DD;
-  margin-bottom: .5em;
+  color: #3394dd;
+  margin-bottom: 0.5em;
 }
 
-.how-it-works{
+.how-it-works {
   display: flex;
   position: relative;
   justify-content: center;
@@ -126,31 +126,30 @@ a {
 }
 
 /*send a package*/
-.send-packages{
+.send-packages {
   display: flex;
   height: 600px;
-
 }
 
-.send-hero{
+.send-hero {
   width: 50%;
-  background-color: #00305B;
+  background-color: #00305b;
   text-align: center;
 }
 
-.send-img{
+.send-img {
   width: 50%;
 }
-.send-title{
-  font-size: 3.0rem;
+.send-title {
+  font-size: 3rem;
   color: #ffffff;
-  margin-top: 2.0em;
+  margin-top: 2em;
 }
-.send-subtitle{
+.send-subtitle {
   color: #ffffff;
   width: 60%;
   margin-left: 20%;
-  margin-bottom: 2.0em;
+  margin-bottom: 2em;
 }
 #send-btn {
   text-align: center;
@@ -168,8 +167,8 @@ a {
 #send-btn:hover {
   background-color: #2b6ca3;
 }
-.send-packages{
-  margin-bottom: 2.0em;
+.send-packages {
+  margin-bottom: 2em;
 }
 /* Kaustub */
 
@@ -306,7 +305,6 @@ footer a:hover {
   font-weight: 500;
 }
 
-
 /* Carry Packages */
 .carry-package {
   display: flex;
@@ -339,7 +337,7 @@ footer a:hover {
 
 .form-control {
   position: relative;
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
 }
 
 .form-control label {
@@ -347,16 +345,16 @@ footer a:hover {
   margin-bottom: 5px;
 }
 
-.form-control input:not([type="checkbox"]) {
+.form-control input:not([type='checkbox']) {
   display: block;
   width: 50%;
-  padding: .6em;
+  padding: 0.6em;
   border-radius: 4px;
   outline: none;
   border: 2px solid #acacac;
 }
 
-.form-control input[type="checkbox"] {
+.form-control input[type='checkbox'] {
   margin-top: 1em;
 }
 
@@ -367,7 +365,7 @@ footer a:hover {
 .form-control i {
   position: absolute;
   top: 45%;
-  right: 50%;
+  right: 49%;
   color: #e74c3c;
   visibility: hidden;
 }
@@ -389,26 +387,25 @@ footer a:hover {
   visibility: visible;
 }
 
-
-
 /* form div.btn-container {
   margin-top: 1em;
   width: 50%;
 } */
 
 #carry-submit-btn {
-  padding: .6em;
+  padding: 0.6em;
   margin-top: 1em;
   width: 50%;
   color: #fff;
   background-color: #04adc7;
   border: 2px solid #04adc7;
+  outline: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #carry-submit-btn:hover {
-  border-color: #05a4bd;;
+  border-color: #05a4bd;
   background-color: #05a4bd;
 }
 
@@ -429,14 +426,31 @@ footer a:hover {
   margin-right: 10%;
 }
 
-
-
 @media (max-width: 1136px) {
   html {
     font-size: 14px;
   }
   .carry-msg-subtitle {
     width: 40%;
+  }
+
+  .carry-package h1 {
+    width: 80%;
+    padding: 0em -1em 0em 1em;
+  }
+
+  .carry-package h3 {
+    width: 80%;
+  }
+
+  .form-control input:not([type='checkbox']) {
+    width: 80%;
+  }
+  .form-control i {
+    right: 20%;
+  }
+  #carry-submit-btn {
+    width: 85%;
   }
 }
 
@@ -484,5 +498,47 @@ footer a:hover {
   #carry-apply-btn {
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  /* Carry Packages */
+  .carry-package {
+    display: block;
+    text-align: center;
+  }
+
+  .carry-package img {
+    display: none;
+  }
+
+  .carry-package section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .carry-package h1 {
+    width: 100%;
+    padding: 0em -1em 0em 1em;
+  }
+
+  .carry-package h3 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .form-control input:not([type='checkbox']) {
+    width: 80%;
+    margin: auto;
+  }
+
+  .form-control i {
+    right: 10%;
+  }
+
+  .form-control.error small {
+    text-align: left;
+  }
+
+  #carry-submit-btn {
+    width: 85%;
+    max-width: 400px;
   }
 }
