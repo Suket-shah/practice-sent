@@ -4,7 +4,7 @@ const router = express.Router();
 const fs = require('fs');
 
 router.get('/carry-packages', (req, res, next) => {
-  res.render('carry', {});
+  res.render('carry', {apiKey: process.env.GOOGLE_API_KEY});
 });
 
 router.post('/carry-packages', (req, res, next) => {

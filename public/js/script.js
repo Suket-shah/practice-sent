@@ -41,6 +41,9 @@ const returnDate = document.getElementById('date');
 const termsAndConditions = document.getElementById('toc');
 
 const formInputs = [name, uteid, phoneNumber, homeAddress, returnDate];
+function yolo() {
+  const autoComplete = new google.maps.places.Autocomplete(homeAddress);
+}
 
 let validate = (formElement) => {
   let valid = true;
