@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(require('./routes/index'));
 app.use(require('./routes/carry'));
+app.use(require('./routes/send'));
 
 app.listen(PORT, () => {
   console.log(`Server started on port: ${PORT}`);

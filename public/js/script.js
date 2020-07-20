@@ -29,6 +29,9 @@ sentLogo.addEventListener('click', (e) => {
   window.pageXOffset = 0;
 });
 
+//Send Packages
+
+
 // Carry Packages
 
 const carrySubmitBtn = document.getElementById('carry-submit-btn');
