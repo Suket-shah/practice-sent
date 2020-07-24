@@ -30,55 +30,15 @@ sentLogo.addEventListener('click', (e) => {
 });
 
 //Send Packages
+
+//add elements
+const sendTOC = document.getElementById('send-toc');
 const sendSubmitBtn = document.getElementById('send-submit-btn');
-const sendName = document.getElementById('send-name');
-const sendPhone = document.getElementById('send-phone');
-const sendEmail = document.getElementById('send-email');
-const sendPickup = document.getElementById('send-pickup');
-const sendDescription = document.getElementById('send-description');
-const sendToc = document.getElementById('send-toc');
 
-const sendFormInputs = [sendName,sendPhone, sendEmail, sendPickup, sendDescription];
-
-//Code to validate if input is there
-let sendValidate = (formElement) =>{
-  let valid = true; 
-
-  sendFormInputs.forEach(elem =>{
-    if (elem.value.trim()===''){
-      elem.parentClass.classList.add('error');
-      valid = false;
-    }
-  });
-  return valid;
-};
-
-sendToc.addEventListener('click', (e) => {
-  console.log('hi');
+sendTOC.addEventListener('click', (event)=>{
   sendSubmitBtn.disabled = !sendSubmitBtn.disabled;
-});
-
-
-sendFormInputs.forEach(elem => {
-  elem.addEventListener('focus', (e) => {
-    const parentClass = e.target.parentElement.classList;
-    if (parentClass.contains('error')) {
-      parentClass.remove('error');
-    }
-  });
-});
-
-
-sendSubmitBtn.addEventListener('click', (event) =>{
-  event.preventDefault();
-
-  const sendForm = event.target.parentElement;
-  if(!validate(sendForm)){
-    return;
-  }
-  event.target.parentElement.submit();
-});
-
+  console.log("Unlocked");
+})
 
 // Carry Packages
 
