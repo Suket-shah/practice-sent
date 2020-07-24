@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEND PAGE</title>
+    <title>Send Packages | Sent</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script async src="https://use.fontawesome.com/94c8d2cf59.js"></script>
+    <script defer src="./js/script.js"></script>
 </head>
 <body>
-    
+    <%- include('./includes/header'); %>
+    <main class = "send-package"> 
+        <section>
+            <h1>Have items delivered between Austin and Dallas...</h1>
+            <h3>Every <u>Saturday</u>, we are offering subsidized deliveries, especially for essential items, that need to be sent between Austin and Dallas.</h3>
+            <form action="/send-packages" method="POST">
+                <div class = "form-control">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="send-name">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>This field is required</small>
+                </div>
+                <div class="form-control">
+                    <label for="phone">Phone Number</label>
+                    <input id="send-phone" name="phone" type="tel">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>Enter a valid phone number</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email Address</label>
+                    <input id="send-email" name="email" type="email">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>Enter a valid email</small>
+                </div>
+                <div class="form-control">
+                    <label for="pickup">Package Pickup Address</label>
+                    <input id="send-pickup" name="pickup" type="text">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>Enter a valid location</small>
+                </div>
+                <div class="form-control">
+                    <label for="description">Description</label>
+                    <input id="send-description" name="description" type="text">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>Enter a valid description</small>
+                </div>
+                <div class="form-control">
+                    <input id="send-toc" type="checkbox">
+                    <label for="toc"> I Accept the <a>Terms and Conditions</a></label>
+                </div>
+                <button id="send-submit-btn" type="submit" disabled> Submit</button>
+            </form>
+        </section>
+        <img src="https://images.unsplash.com/photo-1543499459-d1460946bdc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="send-package">
+    </main>
+    <%- include('./includes/footer'); %>
 </body>
 </html>

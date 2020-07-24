@@ -171,6 +171,129 @@ a {
 .send-packages{
   margin-bottom: 2.0em;
 }
+
+/* Send Packages */
+.send-package{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 7em;
+  margin-bottom: 5em;
+}
+
+.send-package section{
+  width: 40%;
+  margin-left: 10%;
+  background-color: #f7f7f7;
+}
+
+.send-package h1{
+  width: 60%;
+  font-size: 2.25rem;
+  color: #05bddb ;
+}
+
+.send-package h3 {
+  width: 60%;
+  margin-top: 1em;
+  font-weight: 600;
+}
+
+.send-package form {
+  margin-top: 1em;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: .3em;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input:not([type="checkbox"]) {
+  display: block;
+  width: 50%;
+  padding: .6em;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #acacac;
+}
+
+.form-control input[type="checkbox"] {
+  margin-top: 1em;
+}
+
+.form-control input:focus {
+  border-color: #05bddb;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45%;
+  right: 50%;
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+.form-control small {
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error i {
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+
+
+/* form div.btn-container {
+  margin-top: 1em;
+  width: 50%;
+} */
+
+#send-submit-btn {
+  padding: .6em;
+  margin-top: 1em;
+  width: 50%;
+  color: #fff;
+  background-color: #04adc7;
+  border: 2px solid #04adc7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#send-submit-btn:hover {
+  border-color: #05a4bd;;
+  background-color: #05a4bd;
+}
+
+#send-submit-btn:active {
+  border-color: #0497ad;
+  background-color: #0497ad;
+}
+
+#send-submit-btn:disabled {
+  border-color: #acacac;
+  background-color: #acacac;
+  pointer-events: none;
+}
+
+.send-package img {
+  width: 40%;
+  height: 800px;
+  margin-right: 10%;
+}
+
 /* Kaustub */
 
 .our-vision {
